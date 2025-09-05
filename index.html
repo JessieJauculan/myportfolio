@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jessie Ann Jauculan • Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo">Jessie Jauculan</div>
+
+    <!-- Hamburger Icon -->
+    <div id="hamburger" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn-talk">Let’s Talk</a>
+  </nav>
+</header>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+</script>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Hey! I'm Jessie</h1>
+      <p>Aspiring IT Professional passionate about web development, design, and problem-solving.</p>
+      <div class="hero-btns">
+        <a href="JESSIE ANN JAUCULAN - CV.pdf" class="btn">Download Resume</a>
+      </div>
+      <div class="social-icons">
+            <a href="https://www.facebook.com/jessieann.jauculan" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/jessie2k02" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com/in/jessie-ann-jauculan-6a5610351/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+      </a>
+</div>
+    </div>
+    <div class="hero-img">
+  <img src="JAUCULAN-removebg-preview.png" alt="Jessie">
+  <div class="decor">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="DSC_6011.JPG" alt="Jessie">
+    </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I am available for UI/UX projects, graphic design and IT support.  
+        Dedicated to solving problems, creating responsive designs, and building user-friendly digital experiences.
+      </p>
+      <div class="stats">
+        <div><h3>2+</h3><p>Website Applications Projects</p></div>
+        <div><h3>5+</h3><p>Adobe Photoshop Project Designs</p></div>
+        <div><h3>20+</h3><p>Canva Project Designs</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Projects -->
+       <!-- Image Modal -->
+    <div id="imgModal">
+      <span onclick="closeModal()">×</span>
+      <img id="modalImg" src="">
+    </div>
+    <!-- Section Heading -->
+  <div class="projects-heading">
+    <h2>Projects</h2>
+    <p>Here are some of the projects I have worked on, showcasing my skills in web development, Adobe Photoshop, and Canva design.</p>
+  </div>
+  <section id="projects" class="projects-container">
+
+    <div class="project-category">
+      <h3>Website Projects</h3>
+      <div class="project-list" id="website-list">
+        <div class="project-card">
+          <img src="39.jpg" alt="Project 1" onclick="openModal(this)">
+          <h4>39'ers Online Ordering Management System</h4>
+          <p>A website for Milk Tea Shop management system with online ordering</p>
+        </div>
+        <div class="project-card">
+          <img src="Screenshot (130).png" alt="Project 2" onclick="openModal(this)">
+          <h4>Premier Drip Reservation</h4>
+          <p>A digital platform designed for efficient service booking and information management.</p>
+        </div>
+      </div>
+      <div class="nav-btns">
+        <button onclick="moveSlide('website-list', -1)">❮</button>
+        <button onclick="moveSlide('website-list', 1)">❯</button>
+      </div>
+    </div>
+
+    <!-- Photoshop Projects -->
+    <div class="project-category">
+      <h3>Adobe Photoshop Projects</h3>
+      <div class="project-list" id="photoshop-list">
+        <div class="project-card">
+          <img src="STUDENT AGENT.jpg" alt="Project 3" onclick="openModal(this)">
+          <h4>Poster Making</h4>
+        </div>
+        <div class="project-card">
+          <img src="adver.jpg" alt="Project 4" onclick="openModal(this)">
+          <h4>Street Food Poster</h4>
+        </div>
+        <div class="project-card">
+          <img src="JAUCULAN.jpg" alt="Project 5" onclick="openModal(this)">
+          <h4>Poster Designs</h4>
+        </div>
+        <div class="project-card">
+          <img src="Cookies copy.jpg" alt="Project 6" onclick="openModal(this)">
+          <h4>Website Layout</h4>
+        </div>
+        <div class="project-card">
+          <img src="Coffee Website copy.jpg" alt="Project 7" onclick="openModal(this)">
+          <h4>Website Layout</h4>
+        </div>
+        <div class="project-card">
+          <img src="Jauculan_ManilaCafe copy.png" alt="Project 8" onclick="openModal(this)">
+          <h4>Website Layout</h4>
+        </div>
+      </div>
+      <div class="nav-btns">
+        <button onclick="moveSlide('photoshop-list', -1)">❮</button>
+        <button onclick="moveSlide('photoshop-list', 1)">❯</button>
+      </div>
+    </div>
+
+    <!-- Canva Projects -->
+    <div class="project-category">
+      <h3>Canva Projects</h3>
+      <div class="project-list" id="canva-list">
+        <div class="project-card">
+          <img src="Business Card.png" alt="Project 9" onclick="openModal(this)">
+          <h4>Business Card</h4>
+        </div>
+        <div class="project-card">
+          <img src="ube.png" alt="Project 10" onclick="openModal(this)">
+          <h4>Poster for Ube Champorado</h4>
+        </div>
+        <div class="project-card">
+          <img src="1.png" alt="Project 11" onclick="openModal(this)">
+          <h4>Business Poster</h4>
+        </div>
+        <div class="project-card">
+          <img src="2.png" alt="Project 12" onclick="openModal(this)">
+          <h4>Business Poster</h4>
+        </div>
+        <div class="project-card">
+          <img src="3.png" alt="Project 13" onclick="openModal(this)">
+          <h4>Business Poster</h4>
+        </div>
+        <div class="project-card">
+          <img src="4.png" alt="Project 14" onclick="openModal(this)">
+          <h4>Business Poster</h4>
+        </div>
+        <div class="project-card">
+          <img src="5.png" alt="Project 15" onclick="openModal(this)">
+          <h4>Business Poster</h4>
+        </div>
+        <div class="project-card">
+          <img src="6.png" alt="Project 16" onclick="openModal(this)">
+          <h4>Business Poster</h4>
+        </div>
+        <div class="project-card">
+          <img src="flyers1.png" alt="Project 17" onclick="openModal(this)">
+          <h4>Business Poster</h4>
+        </div>
+        <div class="project-card">
+          <img src="flyers2.png" alt="Project 18" onclick="openModal(this)">
+          <h4>Business Poster</h4>
+        </div>
+      </div>
+      <div class="nav-btns">
+        <button onclick="moveSlide('canva-list', -1)">❮</button>
+        <button onclick="moveSlide('canva-list', 1)">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <h2>Services I Provide</h2>
+    <div class="services-list">
+      <div class="service-card">
+        <h3>IT Support</h3>
+        <p>IT related task such as software installation, network configuration, account management,ticketing system and lastly hardware/software troubleshooting.</p>
+        <br><p> Administrative task like documentation, organizing data, inventory management.</p>
+      </div>
+      <div class="service-card">
+        <h3>Graphic Design</h3>
+        <p>Creative posters, branding materials, and digital content.</p>
+      </div>
+      <div class="service-card">
+        <h3>UI/UX Design</h3>
+        <p>Designing clean and user-friendly digital experiences.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="container">
+    <h2 class="h2">Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">Canva</div>
+      <div class="skill">Adobe Photoshop</div>
+      <div class="skill">Figma</div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="container">
+    <h2>Testimonials</h2>
+    <div class="testimonial-slider">
+      <button class="testimonial-btn prev">&#10094;</button>
+      <div class="testimonial-track">
+        <div class="testimonial">
+          <p>"Jessie consistently finished her task in a timely manner. She is easy to adapt and work with her task efficiently."</p>
+          <p>- Sir Richard Tuazon (Internship Supervisor)</p>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="testimonial">
+          <p>"Her designs are professional and modern."</p>
+          <p>- Bryan Alanonay</p>
+          <div class="stars">★★★★☆</div>
+        </div>
+        <div class="testimonial">
+          <p>"A hardworking individual who adapts quickly."</p>
+          <p>- Red Rubio (Internship Trainer)</p>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+      <button class="testimonial-btn next">&#10095;</button>
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mjkvldej" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Jessie Ann Jauculan | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
